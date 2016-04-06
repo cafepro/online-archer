@@ -18006,3 +18006,549 @@ Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:05:17 +02
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:05:17 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Header> at /home/jorge/ror/online-archer/app/models/header.rb:2)
+  [1m[35mHeader Load (0.4ms)[0m  SELECT  `headers`.* FROM `headers` WHERE `headers`.`used_at` = 'HomeController' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+  Rendered headers/_header.html.erb (1.3ms)
+Completed 200 OK in 242ms (Views: 208.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/jquery.fittext.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/classie.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/wow.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/jquery.easing.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/cbpAnimatedHeader.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:31:23 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-06 20:43:57 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Header> at /home/jorge/ror/online-archer/app/models/header.rb:2)
+  [1m[35mHeader Load (0.3ms)[0m  SELECT  `headers`.* FROM `headers` WHERE `headers`.`used_at` = 'HomeController' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  Rendered headers/_header.html.erb (1.4ms)
+Completed 200 OK in 246ms (Views: 213.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/jquery.fittext.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/classie.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/jquery.easing.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/wow.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/cbpAnimatedHeader.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:43:58 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+Processing by HomeController#index as HTML
+  [1m[36mHeader Load (0.7ms)[0m  [1mSELECT  `headers`.* FROM `headers` WHERE `headers`.`used_at` = 'HomeController' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  Rendered headers/_header.html.erb (0.5ms)
+Completed 200 OK in 119ms (Views: 116.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/wow.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/jquery.easing.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/jquery.fittext.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/cbpAnimatedHeader.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/classie.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:22 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+Processing by HomeController#index as HTML
+  [1m[35mHeader Load (0.4ms)[0m  SELECT  `headers`.* FROM `headers` WHERE `headers`.`used_at` = 'HomeController' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  Rendered headers/_header.html.erb (0.5ms)
+Completed 200 OK in 116ms (Views: 114.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/jquery.easing.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/jquery.fittext.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/wow.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/classie.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/assets/cbpAnimatedHeader.js?body=1" for 127.0.0.1 at 2016-04-06 20:44:47 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+Processing by HomeController#index as HTML
+  [1m[36mHeader Load (1.7ms)[0m  [1mSELECT  `headers`.* FROM `headers` WHERE `headers`.`used_at` = 'HomeController' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  Rendered headers/_header.html.erb (0.5ms)
+Completed 200 OK in 147ms (Views: 144.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/wow.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/jquery.fittext.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/classie.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/cbpAnimatedHeader.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/jquery.easing.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-04-06 20:45:21 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+Processing by HomeController#index as HTML
+  [1m[35mHeader Load (0.6ms)[0m  SELECT  `headers`.* FROM `headers` WHERE `headers`.`used_at` = 'HomeController' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  Rendered headers/_header.html.erb (1.0ms)
+Completed 200 OK in 113ms (Views: 111.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/wow.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/jquery.fittext.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/classie.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/jquery.easing.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/cbpAnimatedHeader.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:35 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+Processing by HomeController#index as HTML
+  [1m[36mHeader Load (0.9ms)[0m  [1mSELECT  `headers`.* FROM `headers` WHERE `headers`.`used_at` = 'HomeController' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+  Rendered headers/_header.html.erb (0.7ms)
+Completed 200 OK in 117ms (Views: 114.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/jquery.fittext.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/wow.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/jquery.easing.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/cbpAnimatedHeader.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/classie.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:38 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+Processing by HomeController#index as HTML
+  [1m[35mHeader Load (0.5ms)[0m  SELECT  `headers`.* FROM `headers` WHERE `headers`.`used_at` = 'HomeController' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  Rendered headers/_header.html.erb (0.5ms)
+Completed 200 OK in 113ms (Views: 110.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/jquery.fittext.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/wow.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/jquery.easing.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/classie.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/cbpAnimatedHeader.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:46:57 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+Processing by HomeController#index as HTML
+  [1m[36mHeader Load (0.3ms)[0m  [1mSELECT  `headers`.* FROM `headers` WHERE `headers`.`used_at` = 'HomeController' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered headers/_header.html.erb (0.5ms)
+Completed 200 OK in 116ms (Views: 115.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/jquery.fittext.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/wow.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/jquery.easing.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/classie.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/cbpAnimatedHeader.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:47:36 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+Processing by HomeController#index as HTML
+  [1m[35mHeader Load (0.3ms)[0m  SELECT  `headers`.* FROM `headers` WHERE `headers`.`used_at` = 'HomeController' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered headers/_header.html.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 109.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/cbpAnimatedHeader.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/classie.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/jquery.easing.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/jquery.fittext.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/wow.min.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/headers.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-06 20:48:12 +0200
