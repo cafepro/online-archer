@@ -51,6 +51,13 @@ p {
     line-height: 1.5;
 }
 
+.shadow-layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+}
+
 .bg-primary {
     background-color: #f05f40;
 }
@@ -86,7 +93,7 @@ aside {
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
     color: #f05f40;
@@ -124,7 +131,7 @@ aside {
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
-        background-color: transparent;
+        background-color: rgba(0,0,0,0.7);
     }
 
     .navbar-default .navbar-header .navbar-brand {
@@ -175,7 +182,7 @@ aside {
 header {
     position: relative;
     width: 100%;
-    min-height: auto;
+    min-height: 100%;
     text-align: center;
     color: #fff;
     background-image: url(../img/header.jpg);

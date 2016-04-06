@@ -11,27 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160209162400) do
+ActiveRecord::Schema.define(version: 20160406193649) do
 
-  create_table "amigos", id: false, force: true do |t|
-    t.integer "iduser",              null: false
-    t.integer "idamigo",             null: false
-    t.integer "estado",  default: 0, null: false
+  create_table "amigos", id: false, force: :cascade do |t|
+    t.integer "iduser",  limit: 4,             null: false
+    t.integer "idamigo", limit: 4,             null: false
+    t.integer "estado",  limit: 4, default: 0, null: false
   end
 
-  create_table "headers", force: true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.text     "used_at"
+  create_table "headers", force: :cascade do |t|
+    t.string   "title",              limit: 255
+    t.text     "description",        limit: 65535
+    t.text     "used_at",            limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
+    t.string   "photo_file_name",    limit: 255
+    t.string   "photo_content_type", limit: 255
+    t.integer  "photo_file_size",    limit: 4
     t.datetime "photo_updated_at"
   end
 
-  create_table "material", primary_key: "usuario", force: true do |t|
+  create_table "material", primary_key: "usuario", force: :cascade do |t|
     t.string "palas",     limit: 200
     t.string "potencia",  limit: 200
     t.string "cuerpo",    limit: 200
@@ -43,76 +43,102 @@ ActiveRecord::Schema.define(version: 20160209162400) do
     t.string "cuerda",    limit: 200
   end
 
-  create_table "modalidades", force: true do |t|
+  create_table "modalidades", force: :cascade do |t|
     t.string "nombre", limit: 50, null: false
   end
 
-  create_table "rondas", force: true do |t|
-    t.integer "sesion",                            null: false
-    t.integer "ronda",                             null: false
-    t.integer "distancia",                         null: false
+  create_table "rondas", force: :cascade do |t|
+    t.integer "sesion",    limit: 4,               null: false
+    t.integer "ronda",     limit: 4,               null: false
+    t.integer "distancia", limit: 4,               null: false
     t.string  "flecha1",   limit: 2, default: "M"
     t.string  "flecha2",   limit: 2, default: "M"
     t.string  "flecha3",   limit: 2, default: "M"
   end
 
-  create_table "sesiones", force: true do |t|
-    t.integer "usuario",                             null: false
-    t.string  "modalidad",   limit: 25,              null: false
-    t.string  "fecha",       limit: 15,              null: false
-    t.string  "hora",        limit: 15,              null: false
-    t.integer "puntuacion",                          null: false
-    t.integer "tipotirada",                          null: false
-    t.integer "public",                  default: 0, null: false
-    t.text    "comentarios"
+  create_table "sesiones", force: :cascade do |t|
+    t.integer "usuario",     limit: 4,                 null: false
+    t.string  "modalidad",   limit: 25,                null: false
+    t.string  "fecha",       limit: 15,                null: false
+    t.string  "hora",        limit: 15,                null: false
+    t.integer "puntuacion",  limit: 4,                 null: false
+    t.integer "tipotirada",  limit: 4,                 null: false
+    t.integer "public",      limit: 4,     default: 0, null: false
+    t.text    "comentarios", limit: 65535
     t.string  "nombre",      limit: 100
     t.string  "media",       limit: 10
-    t.integer "competicion",             default: 0, null: false
-    t.integer "grafica",                 default: 1, null: false
-    t.integer "enlazado",                default: 0, null: false
+    t.integer "competicion", limit: 4,     default: 0, null: false
+    t.integer "grafica",     limit: 4,     default: 1, null: false
+    t.integer "enlazado",    limit: 4,     default: 0, null: false
   end
 
-  create_table "tipotirada", force: true do |t|
+  create_table "tipotirada", force: :cascade do |t|
     t.string  "nombre",     limit: 300, null: false
-    t.integer "dist1",                  null: false
-    t.integer "dist2"
-    t.integer "dist3"
-    t.integer "dist4"
+    t.integer "dist1",      limit: 4,   null: false
+    t.integer "dist2",      limit: 4
+    t.integer "dist3",      limit: 4
+    t.integer "dist4",      limit: 4
     t.string  "dia1",       limit: 50,  null: false
     t.string  "dia2",       limit: 50
     t.string  "dia3",       limit: 50
     t.string  "dia4",       limit: 50
-    t.integer "numflechas",             null: false
+    t.integer "numflechas", limit: 4,   null: false
   end
 
-  create_table "users", force: true do |t|
-    t.string   "email",                            default: "", null: false
-    t.string   "encrypted_password",               default: "", null: false
-    t.string   "reset_password_token"
+  create_table "tolk_locales", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tolk_locales", ["name"], name: "index_tolk_locales_on_name", unique: true, using: :btree
+
+  create_table "tolk_phrases", force: :cascade do |t|
+    t.text     "key",        limit: 65535
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tolk_translations", force: :cascade do |t|
+    t.integer  "phrase_id",       limit: 4
+    t.integer  "locale_id",       limit: 4
+    t.text     "text",            limit: 65535
+    t.text     "previous_text",   limit: 65535
+    t.boolean  "primary_updated",               default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tolk_translations", ["phrase_id", "locale_id"], name: "index_tolk_translations_on_phrase_id_and_locale_id", unique: true, using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                    default: 0,  null: false
+    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
     t.integer  "old_id",                 limit: 8
-    t.string   "name"
+    t.string   "name",                   limit: 255
     t.date     "birth_date"
-    t.string   "sex"
-    t.string   "discipline"
-    t.string   "license"
-    t.string   "photo"
-    t.string   "state"
-    t.integer  "admin"
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
+    t.string   "sex",                    limit: 255
+    t.string   "discipline",             limit: 255
+    t.string   "license",                limit: 255
+    t.string   "photo",                  limit: 255
+    t.string   "state",                  limit: 255
+    t.integer  "admin",                  limit: 4
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "usuarios", force: true do |t|
+  create_table "usuarios", force: :cascade do |t|
     t.string  "mail",        limit: 100,                          null: false
     t.string  "keyword",     limit: 50,                           null: false
     t.string  "nombre",      limit: 100,                          null: false
@@ -122,12 +148,12 @@ ActiveRecord::Schema.define(version: 20160209162400) do
     t.string  "modalidad",   limit: 25
     t.string  "nacional",    limit: 25
     t.string  "regional",    limit: 25
-    t.integer "activo",                  default: 0,              null: false
+    t.integer "activo",      limit: 4,   default: 0,              null: false
     t.string  "foto",        limit: 100, default: "droide.png",   null: false
     t.string  "tuestado",    limit: 100, default: ""
     t.string  "fechamod",    limit: 25,  default: "1900-1-1-0-0", null: false
-    t.integer "recibirmail",             default: 1,              null: false
-    t.integer "admin",                   default: 0,              null: false
+    t.integer "recibirmail", limit: 4,   default: 1,              null: false
+    t.integer "admin",       limit: 4,   default: 0,              null: false
   end
 
 end

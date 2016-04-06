@@ -29,7 +29,7 @@ gem 'byebug', group: :development
 gem 'web-console', group: :development
 
 gem 'devise'
-#gem 'acl9'
+gem 'acl9'
 gem 'therubyracer'
 #gem 'bootstrap'
 gem 'bootstrap-sass'
@@ -42,6 +42,9 @@ gem 'paperclip-meta'
 # gem 'gmaps4rails'
 
 gem 'nested_form'
+
+gem 'tolk'
+gem 'kaminari'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
