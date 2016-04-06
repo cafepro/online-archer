@@ -30,9 +30,11 @@ gem 'web-console', group: :development
 
 gem 'devise'
 #gem 'acl9'
-gem 'less-rails', '~> 2.7.0'
 gem 'therubyracer'
+#gem 'bootstrap'
 gem 'bootstrap-sass'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
 
 gem 'paperclip'
 gem 'paperclip-meta'

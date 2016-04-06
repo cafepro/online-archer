@@ -1,0 +1,14 @@
+<% if @header.blank? %>
+	<header>
+<% else %>
+	<header style="background-image: url('<%= @header.photo.url %>');">
+<% end %>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1><%= @header.title %></h1>
+            <hr>
+            <p><%= @header.description %></p>
+            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+        </div>
+    </div>
+</header>
