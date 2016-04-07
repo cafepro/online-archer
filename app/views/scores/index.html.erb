@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Score type</th>
+      <th>User</th>
+      <th>State</th>
+      <th>Published</th>
+      <th>Points</th>
+      <th>Average</th>
+      <th>X count</th>
+      <th>Ten count</th>
+      <th>Nine count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scores.each do |score| %>
+      <tr>
+        <td><%= score.name %></td>
+        <td><%= score.score_type_id %></td>
+        <td><%= score.user_id %></td>
+        <td><%= score.state %></td>
+        <td><%= score.published %></td>
+        <td><%= score.points %></td>
+        <td><%= score.average %></td>
+        <td><%= score.x_count %></td>
+        <td><%= score.ten_count %></td>
+        <td><%= score.nine_count %></td>
+        <td><%= link_to 'Show', score %></td>
+        <td><%= link_to 'Edit', edit_score_path(score) %></td>
+        <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Score', new_score_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160406193649) do
+ActiveRecord::Schema.define(version: 20160407191400) do
 
   create_table "amigos", id: false, force: :cascade do |t|
     t.integer "iduser",  limit: 4,             null: false
@@ -54,6 +54,21 @@ ActiveRecord::Schema.define(version: 20160406193649) do
     t.string  "flecha1",   limit: 2, default: "M"
     t.string  "flecha2",   limit: 2, default: "M"
     t.string  "flecha3",   limit: 2, default: "M"
+  end
+
+  create_table "scores", force: :cascade do |t|
+    t.string   "name",          limit: 255
+    t.integer  "score_type_id", limit: 4
+    t.integer  "user_id",       limit: 4
+    t.integer  "state",         limit: 4
+    t.integer  "published",     limit: 4
+    t.integer  "points",        limit: 4
+    t.float    "average",       limit: 24
+    t.integer  "x_count",       limit: 4
+    t.integer  "ten_count",     limit: 4
+    t.integer  "nine_count",    limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "sesiones", force: :cascade do |t|

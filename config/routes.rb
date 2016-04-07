@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :scores
   mount Tolk::Engine => '/tolk', :as => 'tolk'
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

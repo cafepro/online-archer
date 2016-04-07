@@ -1,0 +1,4 @@
+<!-- Beautiful Scaffold Menu Do Not Touch This -->
+      <li class="<%= "active" if params[:controller] == "scores" %>">
+        <%= link_to t('app.models.score.bs_caption_plural', :default => 'score').capitalize, scores_path %>
+      </li>

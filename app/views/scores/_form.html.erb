@@ -1,0 +1,57 @@
+<%= form_for(@score) do |f| %>
+  <% if @score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@score.errors.count, "error") %> prohibited this score from being saved:</h2>
+
+      <ul>
+      <% @score.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :score_type_id %><br>
+    <%= f.number_field :score_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.number_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :published %><br>
+    <%= f.number_field :published %>
+  </div>
+  <div class="field">
+    <%= f.label :points %><br>
+    <%= f.number_field :points %>
+  </div>
+  <div class="field">
+    <%= f.label :average %><br>
+    <%= f.text_field :average %>
+  </div>
+  <div class="field">
+    <%= f.label :x_count %><br>
+    <%= f.number_field :x_count %>
+  </div>
+  <div class="field">
+    <%= f.label :ten_count %><br>
+    <%= f.number_field :ten_count %>
+  </div>
+  <div class="field">
+    <%= f.label :nine_count %><br>
+    <%= f.number_field :nine_count %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

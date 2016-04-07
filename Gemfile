@@ -45,6 +45,8 @@ gem 'nested_form'
 
 gem 'tolk'
 gem 'kaminari'
+
+#gem 'beautiful_scaffold'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -56,4 +58,3 @@ gem 'kaminari'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
