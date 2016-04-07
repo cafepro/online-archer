@@ -1,3 +1,51 @@
 // Place all the styles related to the scores controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.app-content {
+	margin-top:50px;
+	
+}
+
+.keyboard{
+	position:fixed;
+	bottom:0;
+	height: 43%;
+	background-color: #eb3812;
+	.arrow{
+		width: 24.2%;
+		text-align: center;
+		display: inline-block;
+		.btn {
+			height: auto;
+			display:block;
+			background-color: #eb3812;
+			color: #FFF;
+			font-size:1.5em;
+			line-height: 4;
+			border-radius:50%;
+			/*border: 1px solid white;*/
+			&:hover,&:active{
+				background-color: darken(#eb3812,5%);
+			}
+		}
+	}
+}
+
+.partial_score{
+	position: fixed;
+	top:40%;
+	.arrow{
+		width: 24.2%;
+		text-align: center;
+		display: inline-block;
+	}
+	input {
+		width: 100%;
+		border: none;
+	    border-bottom: 1px solid#999;
+	    height: 50px;
+	    text-align: center;
+	    font-size:1.5em;
+	}
+}

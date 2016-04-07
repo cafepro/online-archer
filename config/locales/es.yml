@@ -43,3 +43,5 @@ es:
       estamos: Estamos en contacto
       texto: 'Puede que te interese contactar con nosotros, estamos a tu disposición en la siguiente dirección, ten en cuenta que esto es un proyecto en aun en ciernes...'
     info_mail: 'OnlineArcherInfo@gmail.com'
+  score:
+    points: pts.

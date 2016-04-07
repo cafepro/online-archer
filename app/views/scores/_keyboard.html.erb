@@ -1,0 +1,68 @@
+<div class="keyboard">
+	<div class="">
+		<div class="arrow">
+			<%= link_to 'X', add_arrow_score_path(@score, arrow:'X', value:10), class: 'btn btn-arrow', remote: true, 'data-value': 10, 'data-arrow': 'X' %>
+		</div>
+		<div class="arrow">
+			<%= link_to '10', add_arrow_score_path(@score, arrow:'10', value:10), class: 'btn btn-arrow', remote: true, 'data-value': 10, 'data-arrow': '10' %>
+		</div>
+		<div class="arrow">
+			<%= link_to '9', add_arrow_score_path(@score, arrow:'9', value:9), class: 'btn btn-arrow', remote: true, 'data-value': 9, 'data-arrow': '9' %>
+		</div>
+		<div class="arrow">
+			<%= link_to '8', add_arrow_score_path(@score, arrow:'8', value:8), class: 'btn btn-arrow', remote: true, 'data-value': 8, 'data-arrow': '8' %>
+		</div>
+		<div class="arrow">
+			<%= link_to '7', add_arrow_score_path(@score, arrow:'7', value:7), class: 'btn btn-arrow', remote: true, 'data-value': 7, 'data-arrow': '7' %>
+		</div>
+		<div class="arrow">
+			<%= link_to '6', add_arrow_score_path(@score, arrow:'6', value:6), class: 'btn btn-arrow', remote: true, 'data-value': 6, 'data-arrow': '6' %>
+		</div>
+		<div class="arrow">
+			<%= link_to '5', add_arrow_score_path(@score, arrow:'5', value:5), class: 'btn btn-arrow', remote: true, 'data-value': 5, 'data-arrow': '5' %>
+		</div>
+		<div class="arrow">
+			<%= link_to '4', add_arrow_score_path(@score, arrow:'4', value:4), class: 'btn btn-arrow', remote: true, 'data-value': 4, 'data-arrow': '4' %>
+		</div>
+		<div class="arrow">
+			<%= link_to '3', add_arrow_score_path(@score, arrow:'3', value:3), class: 'btn btn-arrow', remote: true, 'data-value': 3, 'data-arrow': '3' %>
+		</div>
+		<div class="arrow">
+			<%= link_to '2', add_arrow_score_path(@score, arrow:'2', value:2), class: 'btn btn-arrow', remote: true, 'data-value': 2, 'data-arrow': '2' %>
+		</div>
+		<div class="arrow">
+			<%= link_to '1', add_arrow_score_path(@score, arrow:'1', value:1), class: 'btn btn-arrow', remote: true, 'data-value': 1, 'data-arrow': '1' %>
+		</div>
+		<div class="arrow">
+			<%= link_to 'M', add_arrow_score_path(@score, arrow:'M', value:0), class: 'btn btn-arrow', remote: true, 'data-value': 0, 'data-arrow': 'M' %>
+		</div>
+	</div>
+</div>
+
+<script>
+	var foco = 1;
+	$('.btn-arrow').click(function(){
+		var value = $(this).data('value');
+		var arrow = $(this).data('arrow');
+		$('#acumulacion').html(parseInt($('#acumulacion').html())+value);
+		$('#arrow_'+foco).val(arrow);
+		suma_parcial(value);
+		foco++;
+		if(foco>6) {
+			foco=1;
+			setTimeout(function(){
+			    //do what you need here
+				$('.parciales').val(null);
+				$('.suma_parcial').val(0);
+			}, 2000);
+		}
+	});
+
+	function suma_parcial(value) {
+		if(foco < 4) {
+			$('#partial_1').val(parseInt($('#partial_1').val())+value);	
+		}else{
+			$('#partial_2').val(parseInt($('#partial_2').val())+value);
+		}
+	}
+</script>

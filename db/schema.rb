@@ -11,12 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160407191400) do
+ActiveRecord::Schema.define(version: 20160407222406) do
 
   create_table "amigos", id: false, force: :cascade do |t|
     t.integer "iduser",  limit: 4,             null: false
     t.integer "idamigo", limit: 4,             null: false
     t.integer "estado",  limit: 4, default: 0, null: false
+  end
+
+  create_table "arrows", force: :cascade do |t|
+    t.integer  "score_id",   limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "value",      limit: 4
+    t.string   "arrow",      limit: 255
   end
 
   create_table "headers", force: :cascade do |t|
@@ -54,6 +62,19 @@ ActiveRecord::Schema.define(version: 20160407191400) do
     t.string  "flecha1",   limit: 2, default: "M"
     t.string  "flecha2",   limit: 2, default: "M"
     t.string  "flecha3",   limit: 2, default: "M"
+  end
+
+  create_table "score_types", force: :cascade do |t|
+    t.integer  "score_id",   limit: 4
+    t.string   "name",       limit: 255
+    t.integer  "arrows",     limit: 4
+    t.integer  "distance_1", limit: 4
+    t.integer  "distance_2", limit: 4
+    t.integer  "distance_3", limit: 4
+    t.integer  "distance_4", limit: 4
+    t.boolean  "published"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "scores", force: :cascade do |t|

@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   
-  resources :scores
+  resources :arrows
+  resources :score_types
+
+  resources :scores do 
+    member do
+      get 'puntuar'
+      post 'puntuar'
+      get 'add_arrow'
+    end
+  end
+
   mount Tolk::Engine => '/tolk', :as => 'tolk'
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

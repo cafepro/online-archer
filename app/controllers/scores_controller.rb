@@ -1,5 +1,22 @@
 class ScoresController < ApplicationController
-  before_action :set_score, only: [:show, :edit, :update, :destroy]
+  layout 'app'
+  before_action :authenticate_user!
+  before_action :set_score, only: [:show, :edit, :update, :destroy, :puntuar, :add_arrow]
+
+  def puntuar
+
+  end
+
+  def add_arrow
+    value = params[:value].to_i
+    Arrow.create(score_id: @score.id, value: value, arrow: params[:arrow])
+    # acutalizamos datos del score
+    @score.points += value
+    @score.x_count += 1 if params[:arrow] == 'X'
+    @score.ten_count += 1 if value == 10
+    @score.x_count += 1 if value == 9
+    @score.save
+  end
 
   # GET /scores
   # GET /scores.json
@@ -14,7 +31,9 @@ class ScoresController < ApplicationController
 
   # GET /scores/new
   def new
-    @score = Score.new
+    @score = Score.new(user_id: current_user)
+    @score.points = @score.x_count = @score.ten_count = @score.nine_count = 0
+    @score.average = 0.0
   end
 
   # GET /scores/1/edit
@@ -28,7 +47,7 @@ class ScoresController < ApplicationController
 
     respond_to do |format|
       if @score.save
-        format.html { redirect_to @score, notice: 'Score was successfully created.' }
+        format.html { redirect_to puntuar_score_path(@score), notice: 'Score was successfully created.' }
         format.json { render :show, status: :created, location: @score }
       else
         format.html { render :new }
